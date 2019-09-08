@@ -31,7 +31,9 @@ function! Tabline()
     let s .= (bufname != '' ? '['. fnamemodify(bufname, ':t') . '] ' : '[No Name] ')
 
     if bufmodified
-      let s .= '[+] '
+      let s .= '+ '
+    else
+      let s .= '  '
     endif
   endfor
 
